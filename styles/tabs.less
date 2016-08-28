@@ -7,17 +7,16 @@
   width: 100%;
   height: @tab-height;
   padding: 0;
-  display: table;
-  table-layout: fixed;
+  display: flex;
   -webkit-transform: scale(1);
+  justify-content: flex-start;
 
   .tab {
     .text(normal);
     text-align: center;
     color: @text-color-subtle;
     background: @tab-background-color;
-    display: table-cell;
-    width: 100%;
+    display: inline-block;
     height: @tab-height;
     line-height: @tab-height;
     box-sizing: border-box;
@@ -25,10 +24,11 @@
     border-right: 1px solid transparent;
     border-top: 1px solid transparent;
     border-bottom: none;
-    padding-left: 20px !important;
-    padding-right: 20px !important;
+    padding-left: 26px !important;
+    padding-right: 26px !important;
     position: relative;
     transition: all @transition-time ease;
+    flex: 0 1 auto;
 
     &:not(:first-child) {
       border-left: 1px solid @tab-background-color-active;
@@ -66,8 +66,8 @@
   .tab:hover.active {
     color: @text-color-selected;
     background: @tab-background-color-active;
-    width: 100%;
     border-bottom: 1px solid transparent;
+    flex: 0 1 auto;
 
     & .title {
       color: @text-color-selected;
@@ -136,8 +136,8 @@
 
   .tab .close-icon {
     top: 9px;
-    height: 16px;
-    width: 16px;
+    height: 18px;
+    width: 18px;
     right: 4px;
     position: absolute;
     color: inherit;
@@ -146,17 +146,21 @@
     transition: opacity .2s ease-in-out, background-color .2s ease-in-out;
     &:before {
       color: @text-color-subtle;
-      font-size: 10px;
+      font-size: 12px;
       position: absolute;
       top: 3px;
       left: 4px;
-      width: 8px;
-      height: 8px;
+      width: 10px;
+      height: 10px;
       transition: background-color .2s ease-in-out;
     }
 
     &:hover {
       background: @tab-background-color;
+
+      &:before {
+        color: @text-color-highlight;
+      }
     }
   }
 

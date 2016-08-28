@@ -1,4 +1,5 @@
 # Flexible UI
+This is a fork of Flexible UI by cdonohue
 
 Flexible is an adaptable UI theme for Atom that is based off of [Nucleus Dark UI](https://github.com/ignism/nucleus-dark-ui)
 
@@ -11,8 +12,8 @@ Flexible is an adaptable UI theme for Atom that is based off of [Nucleus Dark UI
 - Improved contrast, padding, and margins
 
 #### Installation
-Go to settings within Atom, select Install and search for Flexible under themes.
+Go to settings within Atom, select Install and search for Shamsup under themes.
 
 Or install directly from the console:
 
-`apm install flexible-ui`
+`apm install shamsup-ui`
